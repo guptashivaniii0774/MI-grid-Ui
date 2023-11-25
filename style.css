@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    padding: 20px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(4, 160px);
+    gap: 10px;
+}
+
+.gridbox {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.box-1 {
+    background-image: url(./images/redmi1.jpg);
+    background-size: 100% 100%;
+    grid-area: 1/1/4/3;
+
+
+}
+
+.box-2 {
+    background-image: url(./images/redmi2.png);
+    background-size: 100% 100%;
+    grid-area: 1/3/3/4;
+    text-align: center;
+}
+
+.box-3 {
+    background-image: url(./images/redmi5.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.box-4 {
+    background-image: url(./images/redmi6.png);
+    background-size: 100% 100%;
+    grid-area: 2/4/5/5;
+    text-align: center;
+}
+
+.box-5 {
+    background-image: url(./images/redmi3.png);
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.box-6 {
+    grid-area: 4/1/5/4;
+    background-image: url(./images/redmi4.jpeg);
+    background-size: 100% 100%;
+
+}
+
+@media(max-width:960px) {
+    .container {
+        height: 100vh;
+        padding: 20px;
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(4, 160px);
+
+    }
+
+    .box-1 {
+        grid-area: 1/1/3/3;
+    }
+
+    .box-2 {
+        grid-area: 1/3/3/5;
+    }
+
+    .box-3 {
+        grid-area: 3/2/4/4;
+    }
+
+    .box-4 {
+        grid-area: 3/4/5/5;
+    }
+
+    .box-6 {
+        grid-area: 4/1/5/4;
+    }
+}
+
+@media(max-width:640px) {
+    .container {
+        height: auto;
+        padding: 0px;
+        grid-template-columns: repeat(1, 480px);
+        grid-template-rows: repeat(6, 400px);
+
+    }
+
+    .gridbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .box-2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .box-3 {
+        grid-column: 1 / 2;
+        grid-row: 3/ 4;
+    }
+
+    .box-4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .box-5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .box-6 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        background-size: 100% 100%;
+    }
+}
